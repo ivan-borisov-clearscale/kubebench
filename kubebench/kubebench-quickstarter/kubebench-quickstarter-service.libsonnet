@@ -13,6 +13,11 @@ local k = import "k.libsonnet";
         },
       },
       spec: {
+        selector: {
+          matchLabels: {
+            role: "kubebench-nfs",
+          }
+        },
         template: {
           metadata: {
             labels: {
