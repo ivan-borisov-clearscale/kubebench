@@ -3,7 +3,7 @@ local k = import "k.libsonnet";
 {
   parts:: {
     nfsDeployment(name, namespace):: {
-      apiVersion: "extensions/v1beta1",
+      apiVersion: "extensions/v1",
       kind: "Deployment",
       metadata: {
         name: name,
@@ -38,7 +38,7 @@ local k = import "k.libsonnet";
                   "clone",
                   "--single-branch",
                   "--",
-                  "https://github.com/kubeflow/kubebench.git",
+                  "https://github.com/ivan-borisov-clearscale/kubebench.git",
                   "/kubebench/repo",
                 ],
                 volumeMounts: [
