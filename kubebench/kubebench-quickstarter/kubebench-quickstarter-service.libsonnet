@@ -3,7 +3,7 @@ local k = import "k.libsonnet";
 {
   parts:: {
     nfsDeployment(name, namespace):: {
-      apiVersion: "extensions/v1",
+      apiVersion: "apps/v1",
       kind: "Deployment",
       metadata: {
         name: name,
